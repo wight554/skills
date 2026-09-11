@@ -7,15 +7,13 @@ One install story, one wording. `README.md`, `.changeset/*`, and every page unde
 <canonical-block name="antigravity">
 
 ```bash
-agy plugin marketplace add wight554/skills
-agy plugin install wight554-skills@wight554
+agy plugin install https://github.com/wight554/skills
 ```
 
 Or, from inside a session:
 
 ```
-/plugin marketplace add wight554/skills
-/plugin install wight554-skills@wight554
+/plugin install https://github.com/wight554/skills
 ```
 
 </canonical-block>

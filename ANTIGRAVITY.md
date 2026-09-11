@@ -6,9 +6,9 @@ Skills are organized into bucket folders under `skills/`:
 - `in-progress/`: beta: public on purpose, feedback wanted, not shipped in the plugin
 - `deprecated/`: no longer used
 
-Every skill in `engineering/` or `productivity/` (the **promoted** buckets) must have a reference in the top-level `README.md` and an entry in `.antigravity-plugin/plugin.json`'s `skills` array (the Antigravity plugin ships exactly the promoted set). Skills in `misc/`, `in-progress/`, and `deprecated/` must not appear in either.
+Every skill in `engineering/` or `productivity/` (the **promoted** buckets) must have a reference in the top-level `README.md` and an entry in `plugin.json`'s `skills` array (the Antigravity plugin ships exactly the promoted set). Skills in `misc/`, `in-progress/`, and `deprecated/` must not appear in either.
 
-Install commands are copied verbatim from [.agents/install-block.md](./.agents/install-block.md). `.antigravity-plugin/marketplace.json` makes the repo its own single-plugin marketplace (a fallback the install block explains, not the documented route). Run `agy plugin validate . --strict` after touching either manifest. Why a Antigravity plugin but not (yet) a Antigravity one lives in [.agents/adr/0002-ship-as-a-antigravity-plugin.md](./.agents/adr/0002-ship-as-a-antigravity-plugin.md).
+Install commands are copied verbatim from [.agents/install-block.md](./.agents/install-block.md). Run `agy plugin validate . --strict` after touching either manifest. Why a Antigravity plugin but not (yet) a Antigravity one lives in [.agents/adr/0002-ship-as-a-antigravity-plugin.md](./.agents/adr/0002-ship-as-a-antigravity-plugin.md).
 
 Each skill entry in the top-level `README.md` must link the skill name to its `SKILL.md`.
 

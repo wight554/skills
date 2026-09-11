@@ -32,15 +32,13 @@ Two ways in, two philosophies. **The [Antigravity plugin](https://antigravity.go
 <summary><strong>Antigravity</strong></summary>
 
 ```bash
-agy plugin marketplace add wight554/skills
-agy plugin install wight554-skills@wight554
+agy plugin install https://github.com/wight554/skills
 ```
 
 Or, from inside a session:
 
 ```
-/plugin marketplace add wight554/skills
-/plugin install wight554-skills@wight554
+/plugin install https://github.com/wight554/skills
 ```
 
 </details>
