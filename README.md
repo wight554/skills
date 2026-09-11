@@ -10,7 +10,7 @@
 
 # Skills For Real Engineers
 
-[![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills)
+[![skills.sh](https://skills.sh/b/wight554/skills)](https://skills.sh/wight554/skills)
 
 My agent skills that I use every day to do real engineering - not vibe coding.
 
@@ -24,7 +24,7 @@ If you want to keep up with changes to these skills, and any new ones I create, 
 
 ## Installation (30-second setup)
 
-Two ways in, two philosophies. **The [Antigravity plugin](https://code.antigravity.com/docs/en/plugins)** installs the whole set as a managed, read-only bundle that updates when I ship, so you subscribe rather than fork. **[skills.sh](https://skills.sh/mattpocock/skills)** copies editable skill files into your project, so you can hack on them and make them your own. Pick one: installing both leaves you with every skill twice.
+Two ways in, two philosophies. **The [Antigravity plugin](https://code.antigravity.com/docs/en/plugins)** installs the whole set as a managed, read-only bundle that updates when I ship, so you subscribe rather than fork. **[skills.sh](https://skills.sh/wight554/skills)** copies editable skill files into your project, so you can hack on them and make them your own. Pick one: installing both leaves you with every skill twice.
 
 ### 1. Get the skills
 
@@ -32,13 +32,13 @@ Two ways in, two philosophies. **The [Antigravity plugin](https://code.antigravi
 <summary><strong>Antigravity</strong></summary>
 
 ```bash
-antigravity plugins install mattpocock-skills
+antigravity plugins install wight554-skills
 ```
 
 Or, from inside a session:
 
 ```
-/plugin install mattpocock-skills
+/plugin install wight554-skills
 ```
 
 It's in Antigravity's official marketplace, so there's nothing to add first, and updates arrive automatically.
@@ -49,10 +49,10 @@ It's in Antigravity's official marketplace, so there's nothing to add first, and
 <summary><strong>Antigravity, and other agents</strong></summary>
 
 ```bash
-npx skills@latest add mattpocock/skills
+npx skills@latest add wight554/skills
 ```
 
-Pick the skills you want, and which coding agents to install them on. **The installer lets you choose which skills to take, so make sure `setup-matt-pocock-skills` is one of them.**
+Pick the skills you want, and which coding agents to install them on. **The installer lets you choose which skills to take, so make sure `setup-wight554-skills` is one of them.**
 
 A native Antigravity plugin is on the roadmap (see [`.agents/adr/0002-ship-as-a-antigravity-plugin.md`](./.agents/adr/0002-ship-as-a-antigravity-plugin.md)).
 
@@ -64,14 +64,14 @@ A native Antigravity plugin is on the roadmap (see [`.agents/adr/0002-ship-as-a-
 Use the same installer, on any agent, including Antigravity:
 
 ```bash
-npx skills@latest add mattpocock/skills
+npx skills@latest add wight554/skills
 ```
 
 It writes the skills into your repo as ordinary files you own and can edit. Nothing updates behind your back; pull my latest changes when you want them with `npx skills update`.
 
 </details>
 
-### 2. Run `/setup-matt-pocock-skills`
+### 2. Run `/setup-wight554-skills`
 
 In your agent, run it once per repo. It will:
 
@@ -119,7 +119,7 @@ I felt the same tension with my agents. Agents are usually dropped into a projec
 Example
 </summary>
 
-Here's an example [`CONTEXT.md`](https://github.com/mattpocock/course-video-manager/blob/076a5a7a182db0fe1e62971dd7a68bcadf010f1c/CONTEXT.md), from my `course-video-manager` repo. Which one is easier to read?
+Here's an example [`CONTEXT.md`](https://github.com/wight554/course-video-manager/blob/076a5a7a182db0fe1e62971dd7a68bcadf010f1c/CONTEXT.md), from my `course-video-manager` repo. Which one is easier to read?
 
 - **BEFORE**: "There's a problem when a lesson inside a section of a course is made 'real' (i.e. given a spot in the file system)"
 - **AFTER**: "There's a problem with the materialization cascade"
@@ -195,7 +195,7 @@ Skills I use daily for code work.
 - **[grill-with-docs](./skills/engineering/grill-with-docs/SKILL.md)**: Grilling session that also builds your project's domain model, sharpening terminology and updating `CONTEXT.md` and ADRs inline.
 - **[triage](./skills/engineering/triage/SKILL.md)**: Move issues through a state machine of triage roles.
 - **[improve-codebase-architecture](./skills/engineering/improve-codebase-architecture/SKILL.md)**: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
-- **[setup-matt-pocock-skills](./skills/engineering/setup-matt-pocock-skills/SKILL.md)**: Configure this repo for the engineering skills (issue tracker, triage labels, domain doc layout). Run once per repo before using the other engineering skills.
+- **[setup-wight554-skills](./skills/engineering/setup-wight554-skills/SKILL.md)**: Configure this repo for the engineering skills (issue tracker, triage labels, domain doc layout). Run once per repo before using the other engineering skills.
 - **[to-spec](./skills/engineering/to-spec/SKILL.md)**: Turn the current conversation into a spec and publish it to the issue tracker. No interview, just synthesizes what you've already discussed.
 - **[to-tickets](./skills/engineering/to-tickets/SKILL.md)**: Break any plan, spec, or conversation into a set of tracer-bullet tickets, each declaring its blocking edges, written as text in a local file, or as native blocking links on a real tracker.
 - **[implement](./skills/engineering/implement/SKILL.md)**: Build the work described by a spec or set of tickets, driving `/tdd` at pre-agreed seams and closing out with `/code-review` before committing.
