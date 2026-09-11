@@ -32,7 +32,7 @@ Two ways in, two philosophies. **The [Antigravity plugin](https://antigravity.go
 <summary><strong>Antigravity</strong></summary>
 
 ```bash
-antigravity plugins install wight554-skills
+agy plugins install wight554-skills
 ```
 
 Or, from inside a session:

@@ -8,7 +8,7 @@ We ship a native **Antigravity plugin** and, for now, **defer** a native **Antig
 
 Skills live in bucket folders under `skills/`: `engineering/` and `productivity/` are **promoted** (shipped); `misc/`, `personal/`, `in-progress/`, and `deprecated/` are **not**. A plugin must expose only the promoted set, which spans two of those bucket folders.
 
-- **Antigravity**: `.antigravity-plugin/plugin.json` accepts `skills` as an **array of explicit skill-directory paths**. We list the promoted skills one by one, exclude everything else with zero ambiguity, and add `.antigravity-plugin/marketplace.json` so the repo is its own single-plugin marketplace. Verified end to end: `antigravity plugin validate . --strict` passes, and `marketplace add` → `install` resolves all promoted skills.
+- **Antigravity**: `.antigravity-plugin/plugin.json` accepts `skills` as an **array of explicit skill-directory paths**. We list the promoted skills one by one, exclude everything else with zero ambiguity, and add `.antigravity-plugin/marketplace.json` so the repo is its own single-plugin marketplace. Verified end to end: `agy plugin validate . --strict` passes, and `marketplace add` → `install` resolves all promoted skills.
 
 - **Antigravity**: `.antigravity-plugin/plugin.json` accepts `skills` only as a **single path string** (arrays are rejected with `missing or invalid plugin.json`), and Antigravity discovers `SKILL.md` files recursively under it. There is no way to name two bucket folders, or to curate a subset, from one path. Two escape hatches were tested and rejected:
   - Pointing at `./skills/` would also ship `deprecated/`, `in-progress/`, `personal/`, and `misc/`: retired, draft, and personal skills we deliberately don't promote.
@@ -29,13 +29,13 @@ The only robust ways to give Antigravity a single promoted-only path are (a) **r
 
 ## Update, 2026-08-05
 
-`wight554-skills` was accepted into **Antigravity's official marketplace** (configured name `antigravity-plugins-official`, source repo `anthropics/antigravity-plugins-official`), which every Antigravity install has by default. `antigravity plugins install wight554-skills` is now the documented route, and the `marketplace add` → `install` path above is superseded. The install wording lives in [.agents/install-block.md](../install-block.md).
+`wight554-skills` was accepted into **Antigravity's official marketplace** (configured name `antigravity-plugins-official`, source repo `google-antigravity/antigravity-plugins-official`), which every Antigravity install has by default. `agy plugins install wight554-skills` is now the documented route, and the `marketplace add` → `install` path above is superseded. The install wording lives in [.agents/install-block.md](../install-block.md).
 
 The official listing points at this repo's git URL and reads `.antigravity-plugin/plugin.json` directly, so it does not depend on `.antigravity-plugin/marketplace.json`. That file is retained only as a fallback for installing the repo directly (an unreleased commit, or a fork).
 
 Verified 2026-08-05, on Antigravity 2.1.222, against the live listing:
 
-- `antigravity plugins install wight554-skills` resolves with no marketplace added first, and reports `wight554-skills@antigravity-plugins-official`.
-- `antigravity plugin details wight554-skills` then reports version 1.2.0 and loads the promoted skills.
+- `agy plugins install wight554-skills` resolves with no marketplace added first, and reports `wight554-skills@antigravity-plugins-official`.
+- `agy plugin details wight554-skills` then reports version 1.2.0 and loads the promoted skills.
 - The listing's `source` is `{"source": "url", "url": "https://github.com/wight554/skills.git", "sha": …}`: the **sha is pinned**, so a release reaches installed users when that pin moves, not the moment we tag. At the time of writing the pin sits two commits behind `main`, which is why it lists 22 skills rather than the 24 in `plugin.json`.
 - The in-session `/plugin install wight554-skills` was **not** exercised: `/plugin` is unavailable in headless (`antigravity -p`) sessions. It runs the same resolver as the CLI, and the documented example form is `/plugin install <name>@antigravity-plugins-official`.

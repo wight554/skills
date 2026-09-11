@@ -60,7 +60,7 @@
 - [#536](https://github.com/wight554/skills/pull/536) [`42a5b70`](https://github.com/wight554/skills/commit/42a5b70fcacc7baff1977b13f3919fb2f63af14e) Thanks [@wight554](https://github.com/wight554)! - Ship the skill set as a native **Antigravity plugin**, listed in Antigravity's official marketplace. You can now subscribe to the promoted skills as a managed, read-only bundle instead of copying editable files:
 
   ```bash
-  antigravity plugins install wight554-skills
+  agy plugins install wight554-skills
   ```
 
   Or, from inside a session:
