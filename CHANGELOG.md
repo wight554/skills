@@ -60,16 +60,16 @@
 - [#536](https://github.com/wight554/skills/pull/536) [`42a5b70`](https://github.com/wight554/skills/commit/42a5b70fcacc7baff1977b13f3919fb2f63af14e) Thanks [@wight554](https://github.com/wight554)! - Ship the skill set as a native **Antigravity plugin**, listed in Antigravity's official marketplace. You can now subscribe to the promoted skills as a managed, read-only bundle instead of copying editable files:
 
   ```bash
-  agy plugins install wight554-skills
+  agy plugin marketplace add wight554/skills
+  agy plugin install wight554-skills@wight554
   ```
 
   Or, from inside a session:
 
   ```
-  /plugin install wight554-skills
+  /plugin marketplace add wight554/skills
+  /plugin install wight554-skills@wight554
   ```
-
-  There is no marketplace to add first — the official marketplace is configured by default.
 
   `.antigravity-plugin/plugin.json` carries the full plugin metadata (version, description, author, license, keywords) and the explicit list of promoted skills. `skills.sh` remains the universal installer (and the path for Antigravity and other harnesses today); a native Antigravity plugin is deferred — see `.agents/adr/0002-ship-as-a-antigravity-plugin.md` for why.
 

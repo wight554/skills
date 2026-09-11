@@ -26,16 +26,3 @@ The only robust ways to give Antigravity a single promoted-only path are (a) **r
 
 - Every promoted skill has an entry in `.antigravity-plugin/plugin.json`'s `skills` array (this already stood as a `ANTIGRAVITY.md` rule; it now also gates the plugin's contents).
 - `.antigravity-plugin/plugin.json`'s `version` tracks `package.json`'s version: bump both together on release. Antigravity uses the plugin `version` to decide when installed users see an update.
-
-## Update, 2026-08-05
-
-`wight554-skills` was accepted into **Antigravity's official marketplace** (configured name `antigravity-plugins-official`, source repo `google-antigravity/antigravity-plugins-official`), which every Antigravity install has by default. `agy plugins install wight554-skills` is now the documented route, and the `marketplace add` → `install` path above is superseded. The install wording lives in [.agents/install-block.md](../install-block.md).
-
-The official listing points at this repo's git URL and reads `.antigravity-plugin/plugin.json` directly, so it does not depend on `.antigravity-plugin/marketplace.json`. That file is retained only as a fallback for installing the repo directly (an unreleased commit, or a fork).
-
-Verified 2026-08-05, on Antigravity 2.1.222, against the live listing:
-
-- `agy plugins install wight554-skills` resolves with no marketplace added first, and reports `wight554-skills@antigravity-plugins-official`.
-- `agy plugin details wight554-skills` then reports version 1.2.0 and loads the promoted skills.
-- The listing's `source` is `{"source": "url", "url": "https://github.com/wight554/skills.git", "sha": …}`: the **sha is pinned**, so a release reaches installed users when that pin moves, not the moment we tag. At the time of writing the pin sits two commits behind `main`, which is why it lists 22 skills rather than the 24 in `plugin.json`.
-- The in-session `/plugin install wight554-skills` was **not** exercised: `/plugin` is unavailable in headless (`antigravity -p`) sessions. It runs the same resolver as the CLI, and the documented example form is `/plugin install <name>@antigravity-plugins-official`.

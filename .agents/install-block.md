@@ -2,23 +2,21 @@
 
 One install story, one wording. `README.md`, `.changeset/*`, and every page under `docs/` must say **this** and nothing else. Change it here first, then propagate.
 
-`wight554-skills` is listed in **Antigravity's official marketplace** (configured name `antigravity-plugins-official`, source repo `google-antigravity/antigravity-plugins-official`), which every Antigravity install has out of the box. There is no marketplace to add first. Official Google marketplaces have auto-update enabled by default ([discover-plugins](https://antigravity.google/docs/plugins)), so "updates arrive automatically" is a true claim, not a hope.
-
 ## Antigravity: the plugin
 
 <canonical-block name="antigravity">
 
 ```bash
-agy plugins install wight554-skills
+agy plugin marketplace add wight554/skills
+agy plugin install wight554-skills@wight554
 ```
 
 Or, from inside a session:
 
 ```
-/plugin install wight554-skills
+/plugin marketplace add wight554/skills
+/plugin install wight554-skills@wight554
 ```
-
-It's in Antigravity's official marketplace, so there's nothing to add first, and updates arrive automatically.
 
 </canonical-block>
 
@@ -55,7 +53,3 @@ npx skills@latest update <name>
 ## The two routes are exclusive
 
 The plugin is a managed, read-only bundle you subscribe to. skills.sh writes files you own and edit. Installing both leaves the user with every skill twice: always say "pick one".
-
-## Not the install story
-
-`.antigravity-plugin/marketplace.json` makes the repo its own single-plugin marketplace (`/plugin marketplace add wight554/skills`, then `/plugin install wight554-skills@wight554`). The official listing supersedes it. It is kept as a fallback for installing the repo directly (an unreleased commit, or a fork), and is **not** documented to users.

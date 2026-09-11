@@ -32,16 +32,16 @@ Two ways in, two philosophies. **The [Antigravity plugin](https://antigravity.go
 <summary><strong>Antigravity</strong></summary>
 
 ```bash
-agy plugins install wight554-skills
+agy plugin marketplace add wight554/skills
+agy plugin install wight554-skills@wight554
 ```
 
 Or, from inside a session:
 
 ```
-/plugin install wight554-skills
+/plugin marketplace add wight554/skills
+/plugin install wight554-skills@wight554
 ```
-
-It's in Antigravity's official marketplace, so there's nothing to add first, and updates arrive automatically.
 
 </details>
 
