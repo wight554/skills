@@ -2,7 +2,7 @@
 
 One install story, one wording. `README.md`, `.changeset/*`, and every page under `docs/` must say **this** and nothing else. Change it here first, then propagate.
 
-`wight554-skills` is listed in **Antigravity's official marketplace** (configured name `antigravity-plugins-official`, source repo `anthropics/antigravity-plugins-official`), which every Antigravity install has out of the box. There is no marketplace to add first. Official Anthropic marketplaces have auto-update enabled by default ([discover-plugins](https://code.antigravity.com/docs/en/discover-plugins)), so "updates arrive automatically" is a true claim, not a hope.
+`wight554-skills` is listed in **Antigravity's official marketplace** (configured name `antigravity-plugins-official`, source repo `anthropics/antigravity-plugins-official`), which every Antigravity install has out of the box. There is no marketplace to add first. Official Anthropic marketplaces have auto-update enabled by default ([discover-plugins](https://antigravity.google/docs/plugins)), so "updates arrive automatically" is a true claim, not a hope.
 
 ## Antigravity: the plugin
 
